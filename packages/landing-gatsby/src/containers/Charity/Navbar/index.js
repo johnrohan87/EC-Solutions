@@ -5,7 +5,7 @@ import Image from 'common/components/Image';
 import Container from 'common/components/UI/Container';
 import NavbarWrapper, { MenuWrapper, Button } from './navbar.style';
 
-import logoImage from 'common/assets/image/charity/logo.svg';
+import logoImage from 'common/assets/image/charity/EC-SolutionsBanner_2.jpg';
 import heartImage from 'common/assets/image/charity/heart-red.png';
 
 const Navbar = () => {
@@ -13,7 +13,7 @@ const Navbar = () => {
     <NavbarWrapper className="navbar">
       <Container fullWidth={true}>
         <Link className="logo" to="/charity">
-          <Image src={logoImage} alt="Charity React Next Landing" />
+          <Image src={logoImage} alt="EC Solutions" />
         </Link>
         <MenuWrapper>
           <AnchorLink className="smooth_scroll" href="#donate" offset={81}>

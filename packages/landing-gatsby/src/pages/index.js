@@ -7,6 +7,7 @@ import { DrawerProvider } from 'common/contexts/DrawerContext';
 import Navbar from 'containers/Charity/Navbar';
 import DrawerSection from 'containers/Charity/DrawerSection';
 import BannerSection from 'containers/Charity/BannerSection';
+import ECBanner from 'containers/Charity/ECBanner';
 import FeatureSection from 'containers/Charity/FeatureSection';
 import BranchSection from 'containers/Charity/BranchSection';
 import WorkSection from 'containers/Charity/WorkSection';
@@ -26,11 +27,33 @@ import {
 } from 'containers/Charity/charity.style';
 import SEO from 'components/seo';
 
+/*
+below sticky above content
+<DrawerProvider>
+  <DrawerSection />
+</DrawerProvider>
+*/
+
+/*
+<BannerSection />
+<FeatureSection />
+<BranchSection />
+<WorkSection />
+<MilestoneBlock />
+<HumanityBlock />
+<PromotionBlock />
+<DonateSection />
+<MapSection />
+<FundraiserSection />
+<BlogSection />
+<ClientBlock />
+*/
+
 export default () => {
   return (
     <ThemeProvider theme={charityTheme}>
       <Fragment>
-        <SEO title="Charity" />
+        <SEO title="EC Solutions" />
         <ResetCSS />
         <GlobalStyle />
         {/* Start charity wrapper section */}
@@ -38,22 +61,8 @@ export default () => {
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <Navbar />
           </Sticky>
-          <DrawerProvider>
-            <DrawerSection />
-          </DrawerProvider>
           <ContentWrapper>
-            <BannerSection />
-            <FeatureSection />
-            <BranchSection />
-            <WorkSection />
-            <MilestoneBlock />
-            <HumanityBlock />
-            <PromotionBlock />
-            <DonateSection />
-            <MapSection />
-            <FundraiserSection />
-            <BlogSection />
-            <ClientBlock />
+            <ECBanner />
           </ContentWrapper>
           <Footer />
         </CharityWrapper>
