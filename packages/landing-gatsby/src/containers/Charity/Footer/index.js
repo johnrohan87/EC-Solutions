@@ -64,7 +64,7 @@ const Footer = ({ row, col, colOne, colTwo }) => {
       <Container width="1260px">
         <Box className="row" {...row}>
           <Box className="col-one" {...colOne}>
-            <Link to="/charity" className="logo">
+            <Link to="/" className="logo">
               <Image src={LogoImage} alt="Charity" />
             </Link>
 
