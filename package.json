@@ -30,5 +30,8 @@
       "prettier --trailing-comma es5 --single-quote --write"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "gatsby-source-rss-feed": "^1.2.2",
+    "rss-parser": "^3.12.0"
+  }
 }

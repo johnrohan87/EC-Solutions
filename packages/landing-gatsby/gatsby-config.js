@@ -65,6 +65,20 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `http://static.userland.com/gems/backend/rssTwoExample2.xml`,
+        name: `ExampleRSS`,
+        // Optional
+        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+        parserOption: {
+          customFields: {
+            item: ['itunes:duration'],
+          },
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
