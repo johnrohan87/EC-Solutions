@@ -79,6 +79,15 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `https://www.miamidade.gov/global/rss-news.page`,
+        name: `MdcNewsRss`,
+        // Optional
+        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

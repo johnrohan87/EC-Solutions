@@ -7,6 +7,7 @@ import { DrawerProvider } from 'common/contexts/DrawerContext';
 import Navbar from 'containers/Charity/Navbar';
 import DrawerSection from 'containers/Charity/DrawerSection';
 import BannerSection from 'containers/Charity/BannerSection';
+import FeedSection from 'containers/Charity/FeedSection';
 import ECBanner from 'containers/Charity/ECBanner';
 import FeatureSection from 'containers/Charity/FeatureSection';
 import BranchSection from 'containers/Charity/BranchSection';
@@ -63,6 +64,7 @@ export default () => {
           </Sticky>
           <ContentWrapper>
             <ECBanner />
+            <FeedSection />
           </ContentWrapper>
           <Footer />
         </CharityWrapper>
