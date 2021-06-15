@@ -16,6 +16,7 @@ import MilestoneBlock from 'containers/Charity/MilestoneBlock';
 import HumanityBlock from 'containers/Charity/HumanityBlock';
 import PromotionBlock from 'containers/Charity/PromotionBlock';
 import DonateSection from 'containers/Charity/DonateSection';
+import GoogleMapSection from 'containers/Charity/GoogleMap';
 import MapSection from 'containers/Charity/MapSection';
 import FundraiserSection from 'containers/Charity/FundraiserSection';
 import BlogSection from 'containers/Charity/BlogSection';
@@ -65,6 +66,7 @@ export default () => {
           <ContentWrapper>
             <ECBanner />
             <FeedSection />
+            <GoogleMapSection />
           </ContentWrapper>
           <Footer />
         </CharityWrapper>

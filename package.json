@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "gatsby-source-rss-feed": "^1.2.2",
+    "google-map-react": "^2.1.9",
     "rss-parser": "^3.12.0"
   }
 }
