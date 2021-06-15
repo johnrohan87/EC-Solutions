@@ -65,6 +65,7 @@ export default () => {
           </Sticky>
           <ContentWrapper>
             <ECBanner />
+            <FeatureSection />
             <FeedSection />
             <GoogleMapSection />
           </ContentWrapper>
