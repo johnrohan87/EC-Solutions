@@ -33,6 +33,7 @@
   "dependencies": {
     "gatsby-source-rss-feed": "^1.2.2",
     "google-map-react": "^2.1.9",
+    "react-scroll-parallax": "^2.4.0",
     "rss-parser": "^3.12.0"
   }
 }

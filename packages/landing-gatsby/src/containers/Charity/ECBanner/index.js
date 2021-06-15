@@ -9,6 +9,7 @@ import SectionWrapper, {
 } from './mapSection.style';
 
 import ecBanner from 'common/assets/image/charity/EC-SolutionsBanner_2.jpg';
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 const ECBanner = () => {
   return (
@@ -18,8 +19,12 @@ const ECBanner = () => {
           <Heading content="Help when you need it" />
           <Text content="" />
         </SectionHeader>
-        <ImageWrapper>
-          <Image src={ecBanner} alt="EC Solutions Banner" height="500px" />
+        <ImageWrapper style={{ overflow: 'hidden' }}>
+          <ParallaxProvider>
+            <Parallax y={[-50, 40]} tagOuter="figure">
+              <Image src={ecBanner} alt="EC Solutions Banner" height="500px" />
+            </Parallax>
+          </ParallaxProvider>
         </ImageWrapper>
       </Container>
     </SectionWrapper>

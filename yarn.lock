@@ -13423,6 +13423,13 @@ react-scroll-parallax@^2.3.3:
   dependencies:
     prop-types "^15.5.10"
 
+react-scroll-parallax@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-2.4.0.tgz#064362107e18a1f610ba5c8e11c1c1aea0da4129"
+  integrity sha512-lFbf2SIEyxyIko/edR8Fx2mnn4T0t2WzLBa4E5ApoGwDsSWS1crL+LjRYtin+f3EV+rmBDzWqqr7vB5GsRpg9Q==
+  dependencies:
+    prop-types "^15.5.10"
+
 react-scrollspy@^3.4.2:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/react-scrollspy/-/react-scrollspy-3.4.3.tgz#12bccebc7e2dfe228b873288b3f473904edb3854"
