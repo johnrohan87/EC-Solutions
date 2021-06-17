@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import {
+  //useStaticQuery, graphql,
+  Link,
+} from 'gatsby';
 import { Icon } from 'react-icons-kit';
 import { linkedin } from 'react-icons-kit/fa/linkedin';
 import { facebook } from 'react-icons-kit/fa/facebook';
@@ -8,12 +11,12 @@ import { twitter } from 'react-icons-kit/fa/twitter';
 import { github } from 'react-icons-kit/fa/github';
 import Box from 'common/components/Box';
 import Text from 'common/components/Text';
-import Heading from 'common/components/Heading';
+//import Heading from 'common/components/Heading';
 import Image from 'common/components/Image';
 import Container from 'common/components/UI/Container';
 import FooterWrapper, {
-  List,
-  ListItem,
+  //List,
+  //ListItem,
   CopyrightText,
   SocialList,
   SelectWrapper,
@@ -22,6 +25,7 @@ import FooterWrapper, {
 import LogoImage from 'common/assets/image/charity/EC-SolutionsBanner_2.jpg';
 
 const Footer = ({ row, col, colOne, colTwo }) => {
+  /*
   const data = useStaticQuery(graphql`
     query {
       charityJson {
@@ -38,7 +42,7 @@ const Footer = ({ row, col, colOne, colTwo }) => {
     }
   `);
 
-  /*
+  
   <SelectWrapper>
   <select aria-label="language switcher">
     <option value="english">English</option>

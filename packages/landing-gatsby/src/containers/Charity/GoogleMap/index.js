@@ -1,19 +1,18 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 
-import Heading from 'common/components/Heading';
-import Text from 'common/components/Text';
-import Image from 'common/components/Image';
+//import Heading from 'common/components/Heading';
+//import Text from 'common/components/Text';
+//import Image from 'common/components/Image';
 import Container from 'common/components/UI/Container';
-import SectionWrapper, {
-  SectionHeader,
-  ImageWrapper,
-} from './mapSection.style';
+import SectionWrapper from //SectionHeader,
+//ImageWrapper,
+'./mapSection.style';
 
 import mapImage from 'common/assets/image/charity/EC-SolutionsBanner.jpg';
 
 const GoogleMapSection = (props) => {
-  const AnyReactComponent = ({ text }) => <div>{text}</div>;
+  //const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
   let defaultProps = {
     center: {
@@ -40,6 +39,7 @@ const GoogleMapSection = (props) => {
               width="60px"
               style={{ borderRadius: '50%' }}
               src={mapImage}
+              alt="EC Solutions"
             />
           </GoogleMapReact>
         </div>

@@ -1,26 +1,29 @@
-import React, { Fragment } from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
-import { Icon } from 'react-icons-kit';
-import { chevronRight } from 'react-icons-kit/feather/chevronRight';
-import Image from 'gatsby-image';
-import Text from 'common/components/Text';
-import Heading from 'common/components/Heading';
-import GlideCarousel from 'common/components/GlideCarousel';
-import GlideSlide from 'common/components/GlideCarousel/glideSlide';
+import React from 'react';
+//, { Fragment }, Link
+import { useStaticQuery, graphql } from 'gatsby';
+//import { Icon } from 'react-icons-kit';
+//import { chevronRight } from 'react-icons-kit/feather/chevronRight';
+//import Image from 'gatsby-image';
+//import Text from 'common/components/Text';
+//import Heading from 'common/components/Heading';
+//import GlideCarousel from 'common/components/GlideCarousel';
+//import GlideSlide from 'common/components/GlideCarousel/glideSlide';
 import LeftBar from './leftBar';
 import BannerWrapper, {
   ContentWrapper,
   TextArea,
-  ImageArea,
-  HighlightedText,
+  //ImageArea,
+  //HighlightedText,
 } from './bannerSection.style';
 
 const FeedSection = () => {
+  /**
   const glideOptions = {
     type: 'carousel',
     perView: 1,
     gap: 0,
   };
+   */
 
   const data = useStaticQuery(graphql`
     {
