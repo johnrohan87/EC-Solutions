@@ -52,7 +52,7 @@ below sticky above content
 <ClientBlock />
 */
 
-export default () => {
+const Home = () => {
   return (
     <ThemeProvider theme={charityTheme}>
       <Fragment>
@@ -78,3 +78,4 @@ export default () => {
     </ThemeProvider>
   );
 };
+export default Home;

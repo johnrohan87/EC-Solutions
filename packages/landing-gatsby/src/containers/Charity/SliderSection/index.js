@@ -1,23 +1,16 @@
 import React from 'react';
-//import Heading from 'common/components/Heading';
-//import Text from 'common/components/Text';
-//import Image from 'common/components/Image';
 import Container from 'common/components/UI/Container';
-/** import SectionWrapper, {
-  SectionHeader,
-  ImageWrapper,
-  customCss,
-} from './mapSection.style';
-**/
-
-import Slider from 'react-animated-slider';
-import customCss from './styles.module.scss';
-import 'react-animated-slider/build/horizontal.css';
-//import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-//import { Carousel } from 'react-responsive-carousel';
-//import styles from './styles.module.css';
-
-//import mapImage from 'common/assets/image/charity/map.png';
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+  ButtonBack,
+  ButtonNext,
+} from 'pure-react-carousel';
+import style from 'pure-react-carousel/dist/react-carousel.es.css';
+import buttons from './styles.module.scss';
+import propsComponent from './propsComponent';
+//import { styles } from 'styled-system';
 
 const content = [
   {
@@ -76,41 +69,53 @@ const content = [
   },
 ];
 
-//className={customCss.sliderContent}
-//className={customCss.inner}
-
-const SliderSection = () => {
+const SliderSection = (props) => {
   return (
-    <dir>
-      <Container width="1200px">
-        <div>
-          <h2 className={customCss.setTextRed}>Custom style and animations</h2>
+    <Container width="1200px" className={style}>
+      <h2>Custom style and animations</h2>
+      <CarouselProvider
+        naturalSlideWidth={100}
+        naturalSlideHeight={75}
+        totalSlides={6}
+      >
+        <div className={buttons.container}>
           <Slider>
-            {content.map((item, index) => (
-              <div
-                key={index}
-                className={customCss.sliderContent}
-                style={{
-                  background: `url('${item.image}') no-repeat center center`,
-                }}
-              >
-                <div className={customCss.inner}>
-                  <h1>{item.title}</h1>
-                  <p>{item.description}</p>
-                  <button>{item.button}</button>
-                </div>
-                <section>
-                  <img src={item.userProfile} alt={item.user} />
-                  <span>
-                    Posted by <strong>{item.user}</strong>
-                  </span>
-                </section>
-              </div>
-            ))}
+            {content.map((item, key) => {
+              return (
+                <Slide index={key} className={buttons.slides}>
+                  <div
+                    style={{
+                      backgroundImage: `url(${item.image})`,
+                      height: '100%',
+                      width: '100%',
+                      backgroundSize: 'cover',
+                      backgroundRepeat: 'no-repeat',
+                    }}
+                  >
+                    <h2 className={buttons.h2}>
+                      {item.title}
+                      {key}
+                    </h2>
+                    <p>{item.description}</p>
+                    <propsComponent />
+                    <button>{item.button}</button>
+                    <div>
+                      <div
+                        style={{ backgroundImage: `url(${item.userProfile})` }}
+                      >
+                        {item.user}
+                      </div>
+                    </div>
+                  </div>
+                </Slide>
+              );
+            })}
           </Slider>
+          <ButtonBack className={buttons.buttonBack}>{'<'}</ButtonBack>
+          <ButtonNext className={buttons.buttonNext}>{'>'}</ButtonNext>
         </div>
-      </Container>
-    </dir>
+      </CarouselProvider>
+    </Container>
   );
 };
 
