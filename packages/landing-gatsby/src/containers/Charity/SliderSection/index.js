@@ -1,25 +1,19 @@
 import React from 'react';
-import Container from 'common/components/UI/Container';
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from 'pure-react-carousel';
-import style from 'pure-react-carousel/dist/react-carousel.es.css';
-import buttons from './styles.module.scss';
-import propsComponent from './propsComponent';
-//import { styles } from 'styled-system';
+import { render } from 'react-dom';
+
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
+import 'normalize.css/normalize.css';
+import './slider-animations.css';
+import './styles.css';
 
 const content = [
   {
-    title: 'Vulputate Mollis Ultricies',
-    description:
-      'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.',
-    button: 'Read More',
+    title: 'Domestic Violence',
+    description: 'EC Solutions was there for me when I had no other options',
+    button: `★ ★ ★ ★ ★`,
     image: 'https://i.imgur.com/ZXBtVw7.jpg',
-    user: 'Daniel',
+    user: 'John Doe',
     userProfile: 'https://s7.postimg.cc/abavelo3v/1_3x.png',
   },
   {
@@ -71,51 +65,31 @@ const content = [
 
 const SliderSection = (props) => {
   return (
-    <Container width="1200px" className={style}>
-      <h2>Custom style and animations</h2>
-      <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={75}
-        totalSlides={6}
-      >
-        <div className={buttons.container}>
-          <Slider>
-            {content.map((item, key) => {
-              return (
-                <Slide index={key} className={buttons.slides}>
-                  <div
-                    style={{
-                      backgroundImage: `url(${item.image})`,
-                      height: '100%',
-                      width: '100%',
-                      backgroundSize: 'cover',
-                      backgroundRepeat: 'no-repeat',
-                    }}
-                  >
-                    <h2 className={buttons.h2}>
-                      {item.title}
-                      {key}
-                    </h2>
-                    <p>{item.description}</p>
-                    <propsComponent />
-                    <button>{item.button}</button>
-                    <div>
-                      <div
-                        style={{ backgroundImage: `url(${item.userProfile})` }}
-                      >
-                        {item.user}
-                      </div>
-                    </div>
-                  </div>
-                </Slide>
-              );
-            })}
-          </Slider>
-          <ButtonBack className={buttons.buttonBack}>{'<'}</ButtonBack>
-          <ButtonNext className={buttons.buttonNext}>{'>'}</ButtonNext>
-        </div>
-      </CarouselProvider>
-    </Container>
+    <div>
+      <Slider className="slider-wrapper">
+        {content.map((item, index) => (
+          <div
+            key={index}
+            className="slider-content"
+            style={{
+              background: `url('${item.image}') no-repeat center center`,
+            }}
+          >
+            <div className="inner">
+              <h1>{item.title}</h1>
+              <p>{item.description}</p>
+              <button>{item.button}</button>
+            </div>
+            <section>
+              <img src={item.userProfile} alt={item.user} />
+              <span>
+                Posted by <strong>{item.user}</strong>
+              </span>
+            </section>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
