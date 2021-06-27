@@ -76,6 +76,11 @@ const BannerWrapper = styled.div`
   }
 `;
 
+export const PostContainer = styled.div`
+  width: 100%;
+  align-self: center;
+`;
+
 export const ContentWrapper = styled.div`
   display: flex;
   width: calc(100% - 200px);

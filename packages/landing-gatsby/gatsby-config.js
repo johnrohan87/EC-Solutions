@@ -75,11 +75,11 @@ module.exports = {
         name: `ExampleRSS`,
         // Optional
         // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
-        parserOption: {
+        /*parserOption: {
           customFields: {
             item: ['itunes:duration'],
           },
-        },
+        },*/
       },
     },
     {
@@ -87,6 +87,15 @@ module.exports = {
       options: {
         url: `https://www.miamidade.gov/global/rss-news.page`,
         name: `MdcNewsRss`,
+        // Optional
+        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+      },
+    },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `https://rssfeeds.floridatoday.com/brevard/crime&x=1`,
+        name: `FloridaTodayRss`,
         // Optional
         // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
       },

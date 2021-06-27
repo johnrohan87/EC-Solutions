@@ -12,6 +12,7 @@ import LeftBar from './leftBar';
 import BannerWrapper, {
   ContentWrapper,
   TextArea,
+  PostContainer,
   //ImageArea,
   //HighlightedText,
 } from './bannerSection.style';
@@ -37,6 +38,24 @@ const FeedSection = () => {
           }
         }
       }
+      allFeedFloridaTodayRss {
+        edges {
+          node {
+            link
+            title
+            link
+            pubDate
+            enclosure {
+              url
+            }
+            guid
+            creator
+            content {
+              encoded
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -44,6 +63,38 @@ const FeedSection = () => {
     <BannerWrapper>
       <LeftBar text="SCROLL DOWN" offset={81} sectionId="#feature" />
       <ContentWrapper>
+        <PostContainer>
+          {data.allFeedFloridaTodayRss
+            ? data.allFeedFloridaTodayRss.edges.map((item) => {
+                return (
+                  <div
+                    key={item.node.title}
+                    style={{
+                      border: '5px solid red',
+                      margin: '10px',
+                      padding: '10px',
+                    }}
+                  >
+                    <br />
+                    Title - {item.node.title}
+                    <br />
+                    <br />
+                    <a href={item.node.guid}>Link</a>
+                    <br />
+                    <br />
+                    Content -{' '}
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: item.node.content.encoded,
+                      }}
+                    />
+                    <br />
+                  </div>
+                );
+              })
+            : 'nothing'}
+        </PostContainer>
+        {/* 
         <TextArea>
           {data.allFeedMdcNewsRss
             ? data.allFeedMdcNewsRss.edges.map((item) => {
@@ -77,6 +128,7 @@ const FeedSection = () => {
               })
             : 'nothing'}
         </TextArea>
+        */}
       </ContentWrapper>
     </BannerWrapper>
   );
