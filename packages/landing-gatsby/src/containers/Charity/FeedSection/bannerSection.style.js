@@ -15,7 +15,7 @@ const shake = keyframes`
 
 const BannerWrapper = styled.div`
   display: flex;
-  height: 100vh;
+  height: 100%;
   overflow: auto;
   margin-bottom: 81px;
   margin-top: 100px;
@@ -79,6 +79,15 @@ const BannerWrapper = styled.div`
 export const PostContainer = styled.div`
   width: 100%;
   align-self: center;
+  img {
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  a {
+    align-self: center;
+    text-align: center;
+  }
 `;
 
 export const ContentWrapper = styled.div`

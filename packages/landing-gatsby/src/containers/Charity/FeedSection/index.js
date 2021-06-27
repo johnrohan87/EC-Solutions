@@ -70,19 +70,17 @@ const FeedSection = () => {
                   <div
                     key={item.node.title}
                     style={{
-                      border: '5px solid red',
+                      border: '15px solid lightgrey',
                       margin: '10px',
                       padding: '10px',
                     }}
                   >
+                    <h2>{item.node.title}</h2>
+                    <div>
+                      <a href={item.node.guid}>{item.node.guid}</a>
+                    </div>
                     <br />
-                    Title - {item.node.title}
                     <br />
-                    <br />
-                    <a href={item.node.guid}>Link</a>
-                    <br />
-                    <br />
-                    Content -{' '}
                     <div
                       dangerouslySetInnerHTML={{
                         __html: item.node.content.encoded,
