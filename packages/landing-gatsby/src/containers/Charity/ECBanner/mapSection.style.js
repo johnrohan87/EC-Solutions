@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 const SectionWrapper = styled.section`
   width: 100%;
-  padding: 81px 0;
+  padding: 81px 0 0 0;
   background-color: black;
   @media only screen and (max-width: 1440px) {
-    padding: 70px 0;
+    padding: 70px 0 0 0;
   }
   @media only screen and (max-width: 1360px) {
-    padding: 45px 0 50px;
+    padding: 45px 0 0px;
   }
   @media only screen and (max-width: 991px) {
-    padding: 40px 0;
+    padding: 40px 0 0 0;
   }
 `;
 
