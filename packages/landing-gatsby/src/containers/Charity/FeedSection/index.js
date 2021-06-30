@@ -41,7 +41,6 @@ const FeedSection = () => {
       allFeedFloridaTodayRss {
         edges {
           node {
-            link
             title
             link
             pubDate
@@ -49,7 +48,10 @@ const FeedSection = () => {
               url
             }
             guid
-            creator
+            author
+            dc {
+              creator
+            }
             content {
               encoded
             }
