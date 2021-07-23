@@ -8,7 +8,7 @@ import Navbar from 'containers/Charity/Navbar';
 //import DrawerSection from 'containers/Charity/DrawerSection';
 //import BannerSection from 'containers/Charity/BannerSection';
 import SliderSection from 'containers/Charity/SliderSection';
-import FeedSection from 'containers/Charity/FeedSection';
+//import FeedSection from 'containers/Charity/FeedSection';
 import ECBanner from 'containers/Charity/ECBanner';
 import FeatureSection from 'containers/Charity/FeatureSection';
 //import BranchSection from 'containers/Charity/BranchSection';
@@ -68,7 +68,7 @@ const Home = () => {
             <ECBanner />
             <SliderSection />
             <FeatureSection />
-            <FeedSection />
+            {/*<FeedSection />*/}
             <GoogleMapSection />
           </ContentWrapper>
           <Footer />
