@@ -95,7 +95,7 @@ export const PostContainer = styled.div`
       }
     }
     @media only screen and (max-width: 1360px) {
-      width: calc(100% - 170px);
+      width: 100%;
       img {
         max-width: 500px;
         max-height: 500px;
@@ -103,9 +103,11 @@ export const PostContainer = styled.div`
       .videoBox {
         width: 100%;
         max-width: 500px;
+        padding: 0 10px;
       }
     }
     @media only screen and (max-width: 667px) {
+      width: 100%;
       flex-direction: column;
       img {
         width: 100%;
@@ -114,6 +116,7 @@ export const PostContainer = styled.div`
       .videoBox {
         width: 100%;
         max-width: 500px;
+        height: 300px;
       }
     }
   }
