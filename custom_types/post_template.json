@@ -1,0 +1,45 @@
+{
+    "Main" : {
+      "uid" : {
+        "type" : "UID",
+        "config" : {
+          "label" : "Unique ID",
+          "placeholder" : "ID is REQUIRED"
+        }
+      },
+      "post_title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1",
+          "label" : "Post Title"
+        }
+      },
+      "post_image" : {
+        "type" : "Image",
+        "config" : {
+          "constraint" : {
+            "width" : 500,
+            "height" : 500
+          },
+          "thumbnails" : [ ],
+          "label" : "Post Image"
+        }
+      },
+      "embedded_link" : {
+        "type" : "Embed",
+        "config" : {
+          "label" : "Embedded Link",
+          "placeholder" : "Embedded Link Here"
+        }
+      },
+      "post_content" : {
+        "type" : "StructuredText",
+        "config" : {
+          "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+          "allowTargetBlank" : true,
+          "label" : "Post Content",
+          "placeholder" : "Add Post Content Here"
+        }
+      }
+    }
+  }

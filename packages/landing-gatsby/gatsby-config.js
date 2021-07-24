@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `EC Solutions`,
@@ -68,36 +72,16 @@ module.exports = {
         },
       },
     },
+    'gatsby-plugin-image',
+
     {
-      resolve: `gatsby-source-rss-feed`,
+      resolve: 'gatsby-source-prismic',
       options: {
-        url: `http://static.userland.com/gems/backend/rssTwoExample2.xml`,
-        name: `ExampleRSS`,
-        // Optional
-        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
-        /*parserOption: {
-          customFields: {
-            item: ['itunes:duration'],
-          },
-        },*/
-      },
-    },
-    {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        url: `https://www.miamidade.gov/global/rss-news.page`,
-        name: `MdcNewsRss`,
-        // Optional
-        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
-      },
-    },
-    {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        url: `https://rssfeeds.floridatoday.com/brevard/crime&x=1`,
-        name: `FloridaTodayRss`,
-        // Optional
-        // Read parser document: https://github.com/bobby-brennan/rss-parser#readme
+        repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        schemas: {
+          postTemplate: require('../custom_types/post_template.json'),
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
