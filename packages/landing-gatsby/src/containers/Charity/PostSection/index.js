@@ -11,6 +11,7 @@ import BannerWrapper, {
 //https://youtu.be/TjyderLIZf4
 //https://www.youtube.com/embed/
 import ReactPlayer from 'react-player';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const PostSection = () => {
   const data = useStaticQuery(graphql`
@@ -31,6 +32,7 @@ const PostSection = () => {
               post_image {
                 alt
                 url
+                gatsbyImageData
               }
               post_title {
                 raw
@@ -49,6 +51,9 @@ const PostSection = () => {
         <PostContainer>
           {data.allPrismicPostTemplate
             ? data.allPrismicPostTemplate.edges.map((item) => {
+                const image = getImage(
+                  item.node.data.post_image.gatsbyImageData
+                );
                 return (
                   <div
                     key={item.node.data.post_title.raw[0].text}
@@ -60,13 +65,25 @@ const PostSection = () => {
                   >
                     <h2>{item.node.data.post_title.raw[0].text}</h2>
                     <br />
-                    <img src={item.node.data.post_image.url} />
-                    {item.node.data.embedded_link ? (
-                      <ReactPlayer
-                        url={item.node.data.embedded_link.embed_url}
-                      />
-                    ) : null}
-
+                    <div className="imagesContainer">
+                      <div>
+                        <GatsbyImage
+                          image={image}
+                          alt="test"
+                          imgStyle={{ objectFit: 'contain' }}
+                          style={{ height: '100%', width: '100%' }}
+                        />
+                      </div>
+                      <div className="videoBox">
+                        {item.node.data.embedded_link ? (
+                          <ReactPlayer
+                            url={item.node.data.embedded_link.embed_url}
+                            height="100%"
+                            width="100%"
+                          />
+                        ) : null}
+                      </div>
+                    </div>
                     <p>
                       {item.node.data.post_content.raw.map((item) => {
                         return <p>{item.text}</p>;

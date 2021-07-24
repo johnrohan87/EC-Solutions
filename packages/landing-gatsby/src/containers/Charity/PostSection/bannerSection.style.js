@@ -79,14 +79,43 @@ const BannerWrapper = styled.div`
 export const PostContainer = styled.div`
   width: 100%;
   align-self: center;
-  img {
-    max-width: 500px;
-    max-height: 500px;
-  }
 
   a {
     align-self: center;
     text-align: center;
+  }
+
+  .imagesContainer {
+    display: flex;
+    @media only screen and (max-width: 1440px) {
+      width: calc(100% - 170px);
+      img {
+        max-width: 500px;
+        max-height: 500px;
+      }
+    }
+    @media only screen and (max-width: 1360px) {
+      width: calc(100% - 170px);
+      img {
+        max-width: 500px;
+        max-height: 500px;
+      }
+      .videoBox {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+    @media only screen and (max-width: 667px) {
+      flex-direction: column;
+      img {
+        width: 100%;
+        max-height: auto;
+      }
+      .videoBox {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
   }
 `;
 
