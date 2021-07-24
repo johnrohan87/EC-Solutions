@@ -24,7 +24,7 @@ const FeedSection = () => {
     perView: 1,
     gap: 0,
   };
-   */
+   
 
   const data = useStaticQuery(graphql`
     {
@@ -94,7 +94,8 @@ const FeedSection = () => {
               })
             : 'nothing'}
         </PostContainer>
-        {/* 
+        {*/
+  /* 
         <TextArea>
           {data.allFeedMdcNewsRss
             ? data.allFeedMdcNewsRss.edges.map((item) => {
@@ -128,10 +129,11 @@ const FeedSection = () => {
               })
             : 'nothing'}
         </TextArea>
-        */}
+        */
+  /*}
       </ContentWrapper>
     </BannerWrapper>
-  );
+  );*/
 };
 
 export default FeedSection;

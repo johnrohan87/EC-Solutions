@@ -80,7 +80,7 @@ module.exports = {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         schemas: {
-          postTemplate: require('../custom_types/post_template.json'),
+          post_template: require(`${__dirname}/custom_types/post_template.json`),
         },
       },
     },

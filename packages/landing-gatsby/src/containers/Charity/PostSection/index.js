@@ -8,44 +8,33 @@ import BannerWrapper, {
   //ImageArea,
   //HighlightedText,
 } from './bannerSection.style';
+//https://youtu.be/TjyderLIZf4
+//https://www.youtube.com/embed/
+import ReactPlayer from 'react-player';
 
 const PostSection = () => {
-  /**
-  const glideOptions = {
-    type: 'carousel',
-    perView: 1,
-    gap: 0,
-  };
-   */
-
   const data = useStaticQuery(graphql`
     {
-      allFeedMdcNewsRss {
+      allPrismicPostTemplate {
         edges {
           node {
-            title
-            link
-            content
-            guid
-          }
-        }
-      }
-      allFeedFloridaTodayRss {
-        edges {
-          node {
-            title
-            link
-            pubDate
-            enclosure {
-              url
-            }
-            guid
-            author
-            dc {
-              creator
-            }
-            content {
-              encoded
+            id
+            data {
+              embedded_link {
+                author_name
+                author_url
+                embed_url
+              }
+              post_content {
+                raw
+              }
+              post_image {
+                alt
+                url
+              }
+              post_title {
+                raw
+              }
             }
           }
         }
@@ -58,29 +47,31 @@ const PostSection = () => {
       <LeftBar text="SCROLL DOWN" offset={81} sectionId="#feature" />
       <ContentWrapper>
         <PostContainer>
-          {data.allFeedFloridaTodayRss
-            ? data.allFeedFloridaTodayRss.edges.map((item) => {
+          {data.allPrismicPostTemplate
+            ? data.allPrismicPostTemplate.edges.map((item) => {
                 return (
                   <div
-                    key={item.node.title}
+                    key={item.node.data.post_title.raw[0].text}
                     style={{
                       border: '15px solid lightgrey',
                       margin: '10px',
                       padding: '10px',
                     }}
                   >
-                    <h2>{item.node.title}</h2>
-                    <div>
-                      <a href={item.node.guid}>{item.node.guid}</a>
-                    </div>
+                    <h2>{item.node.data.post_title.raw[0].text}</h2>
                     <br />
-                    <br />
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: item.node.content.encoded,
-                      }}
-                    />
-                    <br />
+                    <img src={item.node.data.post_image.url} />
+                    {item.node.data.embedded_link ? (
+                      <ReactPlayer
+                        url={item.node.data.embedded_link.embed_url}
+                      />
+                    ) : null}
+
+                    <p>
+                      {item.node.data.post_content.raw.map((item) => {
+                        return <p>{item.text}</p>;
+                      })}
+                    </p>
                   </div>
                 );
               })
