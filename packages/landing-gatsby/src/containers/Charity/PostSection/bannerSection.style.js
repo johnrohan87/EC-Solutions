@@ -79,10 +79,26 @@ const BannerWrapper = styled.div`
 export const PostContainer = styled.div`
   width: 100%;
   align-self: center;
+  padding: 50px;
 
   a {
     align-self: center;
     text-align: center;
+  }
+
+  #tv {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: white;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+    color: white;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+  }
+  #tv:hover {
+    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
   }
 
   .imagesContainer {
@@ -118,6 +134,14 @@ export const PostContainer = styled.div`
         max-width: 500px;
         height: 300px;
       }
+    }
+  }
+
+  .videoContainer {
+    div {
+      height: 300px;
+      max-width: 500px;
+      margin: auto;
     }
   }
 `;
