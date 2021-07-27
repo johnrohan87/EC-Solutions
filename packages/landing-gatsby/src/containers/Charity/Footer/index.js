@@ -115,7 +115,8 @@ const Footer = ({ row, col, colOne, colTwo }) => {
               content="© 2021 EC Solutions All Rights Reserved"
             />
           </CopyrightText>
-          <SocialList>
+
+          {/*<SocialList>
             <li className="linkedin">
               <a
                 href="https://www.linkedin.com/company/"
@@ -142,7 +143,7 @@ const Footer = ({ row, col, colOne, colTwo }) => {
                 <Icon icon={github} />
               </a>
             </li>
-          </SocialList>
+          </SocialList>*/}
         </Box>
         {/* End of copyright row */}
       </Container>
