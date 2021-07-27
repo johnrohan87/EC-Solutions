@@ -22,7 +22,7 @@ const ECBanner = () => {
         <ImageWrapper style={{ overflow: 'hidden' }}>
           <ParallaxProvider>
             <Parallax y={[-50, 40]} tagOuter="figure">
-              <Image src={ecBanner} alt="EC Solutions Banner" height="500px" />
+              <Image src={ecBanner} alt="EC Solutions Banner" height="400px" />
             </Parallax>
           </ParallaxProvider>
         </ImageWrapper>
