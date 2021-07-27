@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link className="logo" to="/">
           <Image src={logoImage} alt="EC Solutions" />
         </Link>
-        <MenuWrapper>
+        {/* <MenuWrapper>
           <AnchorLink className="smooth_scroll" href="#donate" offset={81}>
             Help us help them
           </AnchorLink>
@@ -23,7 +23,7 @@ const Navbar = () => {
             <span className="text">SPREAD</span>
             <Image src={heartImage} alt="Charity Landing" />
           </Button>
-        </MenuWrapper>
+        </MenuWrapper>*/}
       </Container>
     </NavbarWrapper>
   );

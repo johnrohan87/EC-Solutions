@@ -68,8 +68,8 @@ const Home = () => {
           <ContentWrapper>
             <ECBanner />
             <SliderSection />
-            <FeatureSection />
-            {/*<FeedSection />*/}
+            {/*<FeatureSection />
+            <FeedSection />*/}
             <PostSection />
             <GoogleMapSection />
           </ContentWrapper>

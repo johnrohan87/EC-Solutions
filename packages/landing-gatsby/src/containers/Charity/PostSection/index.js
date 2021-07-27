@@ -13,6 +13,13 @@ import BannerWrapper, {
 import ReactPlayer from 'react-player';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Autoplay } from 'swiper';
+{
+  /*embedded_link {
+  author_name
+  author_url
+  embed_url
+}*/
+}
 
 const PostSection = () => {
   const data = useStaticQuery(graphql`
@@ -22,11 +29,6 @@ const PostSection = () => {
           node {
             id
             data {
-              embedded_link {
-                author_name
-                author_url
-                embed_url
-              }
               post_content {
                 raw
               }
@@ -56,44 +58,47 @@ const PostSection = () => {
                   item.node.data.post_image.gatsbyImageData
                 );
                 return (
-                  <div
-                    id="tv"
-                    key={item.node.data.post_title.raw[0].text}
-                    style={{
-                      border: '15px solid darkgrey',
-                      margin: '20px 0',
-                      padding: '25px',
-                    }}
-                  >
-                    <h2>{item.node.data.post_title.raw[0].text}</h2>
-                    <br />
-                    <div className="imagesContainer">
-                      <div>
-                        <GatsbyImage
-                          image={image}
-                          alt="test"
-                          imgStyle={{ objectFit: 'contain' }}
-                          style={{ height: '100%', width: '100%' }}
-                        />
-                      </div>
-                    </div>
-                    <p>
-                      {item.node.data.post_content.raw.map((item) => {
-                        return <p>{item.text}</p>;
-                      })}
-                    </p>
-                    <div className="videoContainer">
-                      {item.node.data.embedded_link ? (
+                  <>
+                    <div
+                      id="tv"
+                      key={item.node.data.post_title.raw[0].text}
+                      style={{
+                        border: '15px solid darkgrey',
+                        margin: '20px 0',
+                        padding: '25px',
+                      }}
+                    >
+                      <h2>{item.node.data.post_title.raw[0].text}</h2>
+                      <br />
+                      <div className="imagesContainer">
                         <div>
-                          <ReactPlayer
-                            url={item.node.data.embedded_link.embed_url}
-                            height="100%"
-                            width="100%"
+                          <GatsbyImage
+                            image={image}
+                            alt="test"
+                            imgStyle={{ objectFit: 'contain' }}
+                            style={{ height: '100%', width: '100%' }}
                           />
                         </div>
-                      ) : null}
+                      </div>
+                      <p>
+                        {item.node.data.post_content.raw.map((item) => {
+                          return <p>{item.text}</p>;
+                        })}
+                      </p>
+                      <div className="videoContainer">
+                        {item.node.data.embedded_link ? (
+                          <div>
+                            <ReactPlayer
+                              url={item.node.data.embedded_link.embed_url}
+                              height="100%"
+                              width="100%"
+                            />
+                          </div>
+                        ) : null}
+                      </div>
                     </div>
-                  </div>
+                    <br />
+                  </>
                 );
               })
             : 'nothing'}
