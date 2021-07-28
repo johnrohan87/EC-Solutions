@@ -96,7 +96,7 @@ module.exports = {
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
-          optimize_id: 'OPT_CONTAINER_ID',
+          optimize_id: '2720558425',
           anonymize_ip: true,
           cookie_expires: 0,
         },
@@ -107,7 +107,7 @@ module.exports = {
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
-          exclude: ['/preview/**', '/do-not-track/me/too/'],
+          exclude: ['/preview/**', '/do-not-track/me/too/', '404'],
         },
       },
     },
