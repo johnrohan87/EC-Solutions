@@ -11,7 +11,7 @@ import SliderSection from 'containers/Charity/SliderSection';
 //import FeedSection from 'containers/Charity/FeedSection';
 import PostSection from 'containers/Charity/PostSection';
 import ECBanner from 'containers/Charity/ECBanner';
-import FeatureSection from 'containers/Charity/FeatureSection';
+//import FeatureSection from 'containers/Charity/FeatureSection';
 //import BranchSection from 'containers/Charity/BranchSection';
 //import WorkSection from 'containers/Charity/WorkSection';
 //import MilestoneBlock from 'containers/Charity/MilestoneBlock';

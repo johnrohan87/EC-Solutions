@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import LeftBar from './leftBar';
 import BannerWrapper, {
   ContentWrapper,
-  TextArea,
+  //TextArea,
   PostContainer,
   //ImageArea,
   //HighlightedText,
@@ -12,16 +12,15 @@ import BannerWrapper, {
 //https://www.youtube.com/embed/
 import ReactPlayer from 'react-player';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Autoplay } from 'swiper';
-{
+//import { Autoplay } from 'swiper';
+
+const PostSection = () => {
   /*embedded_link {
   author_name
   author_url
   embed_url
 }*/
-}
 
-const PostSection = () => {
   const data = useStaticQuery(graphql`
     {
       allPrismicPostTemplate {

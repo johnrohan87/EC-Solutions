@@ -4,11 +4,11 @@ import {
   //useStaticQuery, graphql,
   Link,
 } from 'gatsby';
-import { Icon } from 'react-icons-kit';
-import { linkedin } from 'react-icons-kit/fa/linkedin';
-import { facebook } from 'react-icons-kit/fa/facebook';
-import { twitter } from 'react-icons-kit/fa/twitter';
-import { github } from 'react-icons-kit/fa/github';
+//import { Icon } from 'react-icons-kit';
+//import { linkedin } from 'react-icons-kit/fa/linkedin';
+//import { facebook } from 'react-icons-kit/fa/facebook';
+//import { twitter } from 'react-icons-kit/fa/twitter';
+//import { github } from 'react-icons-kit/fa/github';
 import Box from 'common/components/Box';
 import Text from 'common/components/Text';
 //import Heading from 'common/components/Heading';
@@ -18,7 +18,7 @@ import FooterWrapper, {
   //List,
   //ListItem,
   CopyrightText,
-  SocialList,
+  //SocialList,
   SelectWrapper,
 } from './footer.style';
 

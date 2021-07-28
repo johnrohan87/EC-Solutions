@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+//import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Image from 'common/components/Image';
 import Container from 'common/components/UI/Container';
-import NavbarWrapper, { MenuWrapper, Button } from './navbar.style';
+import NavbarWrapper from './navbar.style';
+//, { MenuWrapper, Button }
 
 import logoImage from 'common/assets/image/charity/EC-SolutionsBanner_2.jpg';
-import heartImage from 'common/assets/image/charity/heart-red.png';
+//import heartImage from 'common/assets/image/charity/heart-red.png';
 
 const Navbar = () => {
   return (
