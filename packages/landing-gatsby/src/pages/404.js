@@ -1,11 +1,11 @@
 import React from 'react';
-import SEO from 'components/seo';
+import Seo from 'components/seo';
 import ErrorSec from 'containers/Error';
 import { ResetCSS } from 'common/assets/css/style';
 
 const NotFoundPage = () => (
   <>
-    <SEO title="404: Not found" />
+    <Seo title="404: Not found" />
     <ResetCSS />
     <ErrorSec></ErrorSec>
   </>

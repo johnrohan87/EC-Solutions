@@ -29,7 +29,7 @@ import {
   CharityWrapper,
   ContentWrapper,
 } from 'containers/Charity/charity.style';
-import SEO from 'components/seo';
+import Seo from 'components/seo';
 
 /*
 below sticky above content
@@ -53,11 +53,11 @@ below sticky above content
 <ClientBlock />
 */
 
-const Home = () => {
+const home = () => {
   return (
     <ThemeProvider theme={charityTheme}>
       <Fragment>
-        <SEO title="EC Solutions" />
+        <Seo title="EC Solutions" />
         <ResetCSS />
         <GlobalStyle />
         {/* Start charity wrapper section */}
@@ -80,4 +80,4 @@ const Home = () => {
     </ThemeProvider>
   );
 };
-export default Home;
+export default home;
