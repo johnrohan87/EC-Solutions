@@ -30,6 +30,7 @@ const PostSection = () => {
             data {
               post_content {
                 raw
+                html
               }
               post_image {
                 alt
@@ -80,9 +81,11 @@ const PostSection = () => {
                         </div>
                       </div>
                       <p>
-                        {item.node.data.post_content.raw.map((item) => {
-                          return <p>{item.text}</p>;
-                        })}
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: item.node.data.post_content.html,
+                          }}
+                        />
                       </p>
                       <div className="videoContainer">
                         {item.node.data.embedded_link ? (
