@@ -13,6 +13,12 @@ const SectionWrapper = styled.section`
   @media only screen and (max-width: 991px) {
     padding: 40px 0 0 0;
   }
+  .parallax-outer {
+    margin: 0px;
+  }
+  div {
+    padding: 0px;
+  }
 `;
 
 export const SectionHeader = styled.header`
@@ -22,7 +28,10 @@ export const SectionHeader = styled.header`
     margin-bottom: 70px;
   }
   @media only screen and (max-width: 991px) {
-    margin-bottom: 54px;
+    margin-bottom: 24px;
+  }
+  @media only screen and (max-width: 480px) {
+    margin-bottom: 0px;
   }
 
   h2 {
@@ -65,6 +74,16 @@ export const ImageWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 50px;
+  height: 700px;
+  img {
+    @media only screen and (max-width: 480px) {
+      height: 260;
+    }
+    @media only screen and (min-width: 480px) {
+      height: 400px;
+    }
+  }
 `;
 
 export default SectionWrapper;

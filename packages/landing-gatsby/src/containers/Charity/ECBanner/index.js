@@ -13,7 +13,7 @@ import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 const ECBanner = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper style={{ minHeight: '700px' }}>
       <Container width="1200px">
         <SectionHeader>
           <Heading content="Help when you need it" />
@@ -21,8 +21,13 @@ const ECBanner = () => {
         </SectionHeader>
         <ImageWrapper style={{ overflow: 'hidden' }}>
           <ParallaxProvider>
-            <Parallax y={[-50, 40]} tagOuter="figure">
-              <Image src={ecBanner} alt="EC Solutions Banner" height="400px" />
+            <Parallax y={[-50, 50]} tagOuter="figure">
+              <Image
+                src={ecBanner}
+                alt="EC Solutions Banner"
+                height="260px"
+                width="100%"
+              />
             </Parallax>
           </ParallaxProvider>
         </ImageWrapper>
