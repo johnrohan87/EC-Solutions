@@ -6,6 +6,7 @@ import 'react-animated-slider/build/horizontal.css';
 import 'normalize.css/normalize.css';
 import './slider-animations.css';
 import './styles.css';
+import CustomSectionWrapper from './mapSection.style';
 
 const content = [
   {
@@ -39,8 +40,8 @@ const content = [
 
 const SliderSection = (props) => {
   return (
-    <div>
-      <Slider className="slider-wrapper">
+    <CustomSectionWrapper>
+      <Slider className="slider-wrapper" autoplay="500" touchDisabled="true">
         {content.map((item, index) => (
           <div
             key={index}
@@ -64,7 +65,7 @@ const SliderSection = (props) => {
           </div>
         ))}
       </Slider>
-    </div>
+    </CustomSectionWrapper>
   );
 };
 
