@@ -21,15 +21,18 @@ const BannerWrapper = styled.div`
   margin-top: 100px;
   @media only screen and (max-width: 1360px) {
     margin-bottom: 50px;
+    padding: 25px;
   }
   @media only screen and (max-width: 991px) {
     min-height: 580px;
     height: auto;
     margin-bottom: 40px;
+    padding: 20px;
   }
   @media only screen and (max-width: 667px) {
     min-height: 100vh;
     height: auto;
+    padding: 0 5px 0 0;
   }
 
   .leftbar {
@@ -119,13 +122,33 @@ export const PostContainer = styled.div`
     }
     @media only screen and (max-width: 768px) {
       padding: 20px;
-      font-size: 36px;
-      line-height: 46px;
+      h2 {
+        font-size: 25px;
+        line-height: 30px;
+      }
+      h3 {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
     @media only screen and (min-width: 769px) {
       padding: 25px;
-      font-size: 36px;
-      line-height: 46px;
+      h2 {
+        font-size: 25px;
+        line-height: 30px;
+      }
+      h3 {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
   }
   #tv:hover {
