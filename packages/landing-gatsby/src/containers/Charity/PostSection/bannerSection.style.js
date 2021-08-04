@@ -80,6 +80,12 @@ export const PostContainer = styled.div`
   width: 100%;
   align-self: center;
   padding: 50px;
+  @media only screen and (max-width: 480px) {
+    padding: 0px;
+  }
+  @media only screen and (min-width: 481px) {
+    padding: 20px;
+  }
 
   a {
     align-self: center;
@@ -95,6 +101,32 @@ export const PostContainer = styled.div`
     color: white;
     box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.4s ease;
+
+    @media only screen and (max-width: 480px) {
+      padding: 0px;
+      h2 {
+        font-size: 25px;
+        line-height: 30px;
+      }
+      h3 {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      padding: 20px;
+      font-size: 36px;
+      line-height: 46px;
+    }
+    @media only screen and (min-width: 769px) {
+      padding: 25px;
+      font-size: 36px;
+      line-height: 46px;
+    }
   }
   #tv:hover {
     border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;

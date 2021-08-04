@@ -65,7 +65,6 @@ const PostSection = () => {
                       style={{
                         border: '15px solid darkgrey',
                         margin: '20px 0',
-                        padding: '25px',
                       }}
                     >
                       <h2>{item.node.data.post_title.raw[0].text}</h2>
