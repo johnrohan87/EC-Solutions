@@ -12,7 +12,7 @@ const content = [
   {
     title: 'Car Accident? Need Help Now?',
     description: 'Call EC Solutions for help now',
-    button: ` (786) 546-8611 `,
+    button: `coordinator@ecsolutionsgroup.com`,
     image:
       'https://images.prismic.io/ecsolutions/4760061f-7e9b-4f85-b1a3-dae758681308_ECSolutionsAccident.jpg',
     user: 'John Doe',
@@ -21,7 +21,7 @@ const content = [
   {
     title: 'Grief and Crisis Counseling',
     description: 'We help provide all the solutions for your circumstances',
-    button: ' (786) 546-8611 ',
+    button: 'coordinator@ecsolutionsgroup.com',
     image:
       'https://images.prismic.io/ecsolutions/3f2c3823-1ee8-478a-b1ce-210fd86dd3d5_grief+and+crisis+counseling.jpg',
     user: 'Samantha',
@@ -30,7 +30,7 @@ const content = [
   {
     title: 'Connecting',
     description: 'persons with other service providers',
-    button: ' (786) 546-8611 ',
+    button: 'coordinator@ecsolutionsgroup.com',
     image:
       'https://images.prismic.io/ecsolutions/36c0299f-518e-4ca6-90cc-cc3675c51689_connecting.jpg',
     user: 'Michael',
@@ -53,7 +53,14 @@ const SliderSection = (props) => {
             <div className="inner">
               <h1>{item.title}</h1>
               <p>{item.description}</p>
-              <button>{item.button}</button>
+              <button>
+                <a
+                  style={{ color: 'black' }}
+                  href="mailto:coordinator@ecsolutionsgroup.com"
+                >
+                  {item.button}
+                </a>
+              </button>
             </div>
             {/* 
             <section>

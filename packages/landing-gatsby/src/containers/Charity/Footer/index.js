@@ -72,13 +72,13 @@ const Footer = ({ row, col, colOne, colTwo }) => {
               <Image src={LogoImage} alt="Charity" />
             </Link>
 
-            <Text className="text" content="US: +786-546-8611" />
+            {/*<Text className="text" content="US: +786-546-8611" />*/}
             <a
               aria-label="go to mail"
-              href="mailto:ecsolutionsgroup@gmail.com"
+              href="mailto:coordinator@ecsolutionsgroup.com"
               className="mail"
             >
-              ecsolutionsgroup@gmail.com
+              coordinator@ecsolutionsgroup.com
             </a>
             <SelectWrapper></SelectWrapper>
           </Box>
