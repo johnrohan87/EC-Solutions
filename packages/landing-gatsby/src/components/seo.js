@@ -64,7 +64,6 @@ function Seo({ description, lang, meta, keywords, title }) {
             />
             <Helmet>
               <link rel="me" href="https://twitter.com/ECSolutionsGrp" />
-              <link>"testing"</link>
             </Helmet>
           </>
         );
