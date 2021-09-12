@@ -64,6 +64,14 @@ function Seo({ description, lang, meta, keywords, title }) {
             />
             <Helmet>
               <link rel="me" href="https://twitter.com/ECSolutionsGrp" />
+              <link
+                rel="webmention"
+                href="https://webmention.io/ecsolutionsgroup.com/webmention"
+              />
+              <link
+                rel="pingback"
+                href="https://webmention.io/ecsolutionsgroup.com/xmlrpc"
+              />
             </Helmet>
           </>
         );

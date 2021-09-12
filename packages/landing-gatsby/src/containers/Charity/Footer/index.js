@@ -80,14 +80,6 @@ const Footer = ({ row, col, colOne, colTwo }) => {
             >
               coordinator@ecsolutionsgroup.com
             </a>
-            <link
-              rel="webmention"
-              href="https://webmention.io/ecsolutionsgroup.com/webmention"
-            />
-            <link
-              rel="pingback"
-              href="https://webmention.io/ecsolutionsgroup.com/xmlrpc"
-            />
             <SelectWrapper></SelectWrapper>
           </Box>
           {/* End of logo column */}
