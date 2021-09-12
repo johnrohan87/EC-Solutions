@@ -73,6 +73,7 @@ function Seo({ description, lang, meta, keywords, title }) {
               />
               <link rel="me" href="https://twitter.com/ECSolutionsGrp" />
               <link rel="me" href="https://www.facebook.com/ECSolutionsGroup" />
+              <link rel="me" href="mailto:coordinator@ecsolutionsgroup.com" />
               <link
                 rel="webmention"
                 href="https://webmention.io/ecsolutionsgroup.com/webmention"
