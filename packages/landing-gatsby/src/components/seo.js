@@ -72,6 +72,7 @@ function Seo({ description, lang, meta, keywords, title }) {
                 href="https://tokens.indieauth.com/token"
               />
               <link rel="me" href="https://twitter.com/ECSolutionsGrp" />
+              <link rel="me" href="https://www.facebook.com/ECSolutionsGroup" />
               <link
                 rel="webmention"
                 href="https://webmention.io/ecsolutionsgroup.com/webmention"
