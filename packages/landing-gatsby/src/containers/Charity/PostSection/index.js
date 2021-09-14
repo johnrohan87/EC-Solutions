@@ -57,6 +57,7 @@ const PostSection = () => {
                 const image = getImage(
                   item.node.data.post_image.gatsbyImageData
                 );
+                //updating for push
                 return (
                   <>
                     <div
