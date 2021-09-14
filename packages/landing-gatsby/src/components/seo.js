@@ -62,7 +62,7 @@ function Seo({ description, lang, meta, keywords, title }) {
                 )
                 .concat(meta)}
             />
-            <Helmet>
+            {/*  <Helmet>
               <link
                 rel="authorization_endpoint"
                 href="https://indieauth.com/auth"
@@ -83,6 +83,7 @@ function Seo({ description, lang, meta, keywords, title }) {
                 href="https://webmention.io/ecsolutionsgroup.com/xmlrpc"
               />
             </Helmet>
+            */}
           </>
         );
       }}
