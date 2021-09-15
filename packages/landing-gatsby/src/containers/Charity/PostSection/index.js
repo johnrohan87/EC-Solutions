@@ -50,7 +50,7 @@ const PostSection = () => {
   `);
 
   const arrangeData = (data) => {
-    console.log(data);
+    //console.log(data);
     let arrangedData = data.sort((a, b) => {
       let tmpA = moment(a.node.first_publication_date);
       let tmpB = moment(b.node.first_publication_date);
@@ -65,10 +65,10 @@ const PostSection = () => {
       return result;
     });
     let reversedResult = arrangedData.reverse();
-    console.log(reversedResult);
+    //console.log(reversedResult);
 
     let htmlResult = reversedResult.map((item) => {
-      console.log(item.node);
+      //console.log(item.node);
       const image = getImage(item.node.data.post_image.gatsbyImageData);
       //updating for push
       return (
