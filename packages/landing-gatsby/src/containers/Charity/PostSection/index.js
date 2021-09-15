@@ -82,7 +82,10 @@ const PostSection = () => {
             }}
           >
             <h2>{item.node.data.post_title.raw[0].text}</h2>
+            {/*
+            //timestamp test
             <h2>{item.node.first_publication_date}</h2>
+            */}
             <br />
             <div className="imagesContainer">
               <div>
