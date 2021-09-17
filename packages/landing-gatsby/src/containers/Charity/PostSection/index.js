@@ -139,6 +139,7 @@ const PostSection = () => {
 
 export default PostSection;
 
+// eslint-disable-next-line no-lone-blocks
 {
   /**
    data.allPrismicPostTemplate.edges.map((item) => {

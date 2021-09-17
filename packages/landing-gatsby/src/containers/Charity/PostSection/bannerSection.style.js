@@ -151,10 +151,10 @@ export const PostContainer = styled.div`
       }
     }
   }
-  #tv:hover {
-    border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
-  }
+  //#tv:hover {
+  //  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+  //  box-shadow: 10px 10px rgba(0, 0, 0, 0.25);
+  //}
 
   .imagesContainer {
     display: flex;
