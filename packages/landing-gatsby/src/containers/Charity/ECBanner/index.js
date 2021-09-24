@@ -16,8 +16,9 @@ const ECBanner = () => {
     <SectionWrapper style={{ minHeight: '700px' }}>
       <Container width="1200px">
         <SectionHeader>
-          <Heading content="Help when you need it" />
-          <Text content="" />
+          <Heading content="Victim Services" />
+          {/*<Text content="Help when you need it" />*/}
+          <h2 style={{ marginTop: '0px' }}>Help when you need it</h2>
         </SectionHeader>
         <ImageWrapper style={{ overflow: 'hidden' }}>
           <ParallaxProvider>
