@@ -160,6 +160,10 @@ const CharityWrapper = styled.div`
     padding: 22px 0;
     transition: padding 0.2s ease, background-color 0.1s ease;
 
+    nav {
+      transition: opacity 1s;
+    }
+
     &::before {
       width: calc(100% - 650px);
       content: '';
@@ -190,6 +194,11 @@ const CharityWrapper = styled.div`
 
       &::before {
         display: none;
+      }
+
+      nav {
+        transition: opacity 1s;
+        opacity: 0;
       }
 
       .smooth_scroll {

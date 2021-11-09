@@ -1,6 +1,6 @@
 import React from 'react';
 import Heading from 'common/components/Heading';
-import Text from 'common/components/Text';
+//import Text from 'common/components/Text';
 import Image from 'common/components/Image';
 import Container from 'common/components/UI/Container';
 import SectionWrapper, {
