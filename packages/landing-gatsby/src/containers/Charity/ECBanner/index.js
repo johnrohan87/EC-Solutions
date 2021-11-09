@@ -8,12 +8,13 @@ import SectionWrapper, {
   ImageWrapper,
 } from './mapSection.style';
 
-import ecBanner from 'common/assets/image/charity/EC-SolutionsBanner_2.jpg';
+import ecBanner from 'common/assets/image/charity/New-EC-Logo.png';
+
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
 const ECBanner = () => {
   return (
-    <SectionWrapper style={{ minHeight: '700px' }}>
+    <SectionWrapper style={{ minHeight: '600px' }}>
       <Container width="1200px">
         <SectionHeader>
           <Heading content="Victim Services" />

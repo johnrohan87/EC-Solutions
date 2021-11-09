@@ -1,9 +1,14 @@
 import styled from 'styled-components';
+import ecBackground from 'common/assets/image/charity/EC-Background.jpg';
 
 const SectionWrapper = styled.section`
   width: 100%;
   padding: 81px 0 0 0;
   background-color: black;
+  background-image: url(${ecBackground});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   @media only screen and (max-width: 1440px) {
     padding: 70px 0 0 0;
   }
@@ -36,10 +41,10 @@ export const SectionHeader = styled.header`
 
   h2 {
     color: white;
-    font-size: 50px;
     font-weight: 300;
     margin-top: 100px;
     margin-bottom: 12px;
+    text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
     @media only screen and (max-width: 1440px) {
       font-size: 36px;
     }
@@ -51,7 +56,7 @@ export const SectionHeader = styled.header`
       margin-bottom: 10px;
     }
     @media only screen and (max-width: 767px) {
-      font-size: 28px;
+      font-size: 30px;
     }
   }
 
@@ -80,8 +85,9 @@ export const ImageWrapper = styled.div`
     @media only screen and (max-width: 480px) {
       height: 260;
     }
-    @media only screen and (min-width: 480px) {
+    @media only screen and (min-width: 300px) and (max-width: 480px) {
       height: 400px;
+      padding-top: 75px;
     }
   }
 `;
