@@ -186,7 +186,7 @@ const CharityWrapper = styled.div`
     .navbar {
       padding: 16px 0;
       //background-color: ${themeGet('colors.white', '#ffffff')};
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      //box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
       &::before {
         display: none;
