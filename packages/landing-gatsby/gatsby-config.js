@@ -95,6 +95,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `https://rss.feedspot.com/folder/4xLJt2Qi5g==/rss/rsscombiner`,
+        name: `FeedSpot`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
