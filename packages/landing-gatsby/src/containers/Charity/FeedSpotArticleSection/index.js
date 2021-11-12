@@ -1,39 +1,16 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+//import { useStaticQuery, graphql } from 'gatsby';
 
-const FeedSpotArticleSection = () => {
-  const data = useStaticQuery(graphql`
-    {
-      allFeedFeedSpot {
-        edges {
-          node {
-            title
-            link
-          }
-        }
-      }
-    }
-  `);
-
-  console.log(data);
+const FeedSpotArticleSection = ({ pageContext }) => {
+  console.log(pageContext);
 
   return (
     <>
       <div>
-        {data.allFeedFeedSpot
-          ? data.allFeedFeedSpot.edges.map((item, key) => {
-              return (
-                <div>
-                  <div>{item.node.title}</div>
-                  <div>
-                    {item.node.link
-                      .replace(/.*\/\/[^\/]*/, '')
-                      .replaceAll('/', '')}
-                  </div>
-                </div>
-              );
-            })
-          : 'nothing'}
+        <div>{pageContext.id}</div>
+        <div>{pageContext.title}</div>
+        <div>{pageContext.link}</div>
+        <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
       </div>
     </>
   );
