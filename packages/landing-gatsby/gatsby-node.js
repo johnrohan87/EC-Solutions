@@ -63,6 +63,7 @@ exports.createPages = async ({ graphql, actions, page }) => {
         link: edge.node.link,
         content: edge.node.content,
         slug: trimedLinkSlug,
+        allPosts: result,
       },
     });
   });

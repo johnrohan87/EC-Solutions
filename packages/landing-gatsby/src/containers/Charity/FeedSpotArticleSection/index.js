@@ -19,6 +19,7 @@ import BannerWrapper, {
 } from './bannerSection.style';
 
 const FeedSpotArticleSection = ({ pageContext }) => {
+  //console.log(pageContext.allPosts.data.allFeedFeedSpot.edges)
   return (
     <ThemeProvider theme={charityTheme}>
       <Fragment>
@@ -28,7 +29,7 @@ const FeedSpotArticleSection = ({ pageContext }) => {
         {/* Start charity wrapper section */}
         <CharityWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-            <Navbar />
+            <Navbar data={pageContext.allPosts.data.allFeedFeedSpot.edges} />
           </Sticky>
           <ContentWrapper>
             <BannerWrapper>
