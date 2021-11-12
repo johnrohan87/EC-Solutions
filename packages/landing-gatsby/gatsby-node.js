@@ -48,13 +48,13 @@ exports.createPages = async ({ graphql, actions, page }) => {
     }
   `);
   result.data.allFeedFeedSpot.edges.forEach((edge) => {
-    let tmpPath = edge.node.link
+    let trimedLinkSlug = edge.node.link
       .replace(/.*\/\/[^\/]*/, '')
       .replace('\n/', '')
       .replace(/\/$/, ``);
     createPage({
       ...page,
-      path: `${tmpPath}`,
+      path: `${trimedLinkSlug}`,
       component: blogPostTemplate,
       context: {
         ...page,
@@ -62,6 +62,7 @@ exports.createPages = async ({ graphql, actions, page }) => {
         title: edge.node.title,
         link: edge.node.link,
         content: edge.node.content,
+        slug: trimedLinkSlug,
       },
     });
   });

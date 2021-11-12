@@ -9,7 +9,7 @@ const FeedSpotArticleSection = ({ pageContext }) => {
       <div>
         <div>{pageContext.id}</div>
         <div>{pageContext.title}</div>
-        <div>{pageContext.link}</div>
+        <div>{pageContext.slug}</div>
         <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
       </div>
     </>
