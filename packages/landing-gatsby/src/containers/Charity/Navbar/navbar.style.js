@@ -19,6 +19,24 @@ const NavbarWrapper = styled.nav`
     max-width: 107px;
     width: 100%;
   }
+
+  select {
+    width: 200px;
+    max-width: 100%;
+    /* So it doesn't overflow from it's parent */
+  }
+
+  option {
+    /* wrap text in compatible browsers */
+    -moz-white-space: pre-wrap;
+    -o-white-space: pre-wrap;
+    white-space: pre-wrap;
+    /* hide text that can't wrap with an ellipsis */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* add border after every option */
+    border-bottom: 1px solid #ddd;
+  }
 `;
 
 export const MenuWrapper = styled.div`

@@ -175,13 +175,13 @@ const CharityWrapper = styled.div`
       top: 0;
       z-index: -1;
       @media only screen and (max-width: 1440px) {
-        width: calc(100% - 620px);
+        width: calc(100%);
       }
       @media only screen and (max-width: 1360px) {
-        width: calc(100% - 500px);
+        width: calc(100%);
       }
       @media only screen and (max-width: 991px) {
-        display: none;
+        width: calc(100%);
       }
     }
   }

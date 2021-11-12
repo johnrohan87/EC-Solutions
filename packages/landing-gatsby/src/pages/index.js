@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
 import { charityTheme } from 'common/theme/charity';
@@ -54,7 +55,22 @@ below sticky above content
 <ClientBlock />
 */
 
-const home = () => {
+const Home = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFeedFeedSpot {
+        edges {
+          node {
+            id
+            title
+            link
+            content
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <ThemeProvider theme={charityTheme}>
       <Fragment>
@@ -64,7 +80,7 @@ const home = () => {
         {/* Start charity wrapper section */}
         <CharityWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-            <Navbar />
+            <Navbar data={data.allFeedFeedSpot.edges} />
           </Sticky>
           <ContentWrapper>
             <ECBanner />
@@ -82,4 +98,4 @@ const home = () => {
     </ThemeProvider>
   );
 };
-export default home;
+export default Home;
