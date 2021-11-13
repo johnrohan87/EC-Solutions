@@ -47,7 +47,10 @@ exports.createPages = async ({ graphql, actions, page }) => {
       }
     }
   `);
-  result.data.allFeedFeedSpot.edges.forEach((edge) => {
+  result.data.allFeedFeedSpot.edges.forEach((edge, index, edges) => {
+    const prev = index === 0 ? null : edges[index - 1];
+    const next = index === edges.length - 1 ? null : edges[index + 1];
+
     let trimedLinkSlug = edge.node.link
       .replace(/.*\/\/[^\/]*/, '')
       .replace('\n/', '')
@@ -63,6 +66,9 @@ exports.createPages = async ({ graphql, actions, page }) => {
         link: edge.node.link,
         content: edge.node.content,
         slug: trimedLinkSlug,
+        prev,
+        next,
+        count: index,
         allPosts: result,
       },
     });

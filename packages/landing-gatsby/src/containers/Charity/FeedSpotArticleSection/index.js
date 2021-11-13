@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 //import { useStaticQuery, graphql } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
 import { charityTheme } from 'common/theme/charity';
@@ -19,7 +20,30 @@ import BannerWrapper, {
 } from './bannerSection.style';
 
 const FeedSpotArticleSection = ({ pageContext }) => {
+  let prev = pageContext.prev;
+  let next = pageContext.next;
+
+  let prevSlug = prev
+    ? prev.node.link
+        .replace(/.*\/\/[^\/]*/, '')
+        .replace('\n/', '')
+        .replace(/\/$/, ``)
+    : null;
+
+  let nextSlug = next
+    ? next.node.link
+        .replace(/.*\/\/[^\/]*/, '')
+        .replace('\n/', '')
+        .replace(/\/$/, ``)
+    : null;
+
+  console.log(pageContext, prev, next, prevSlug, nextSlug);
   //console.log(pageContext.allPosts.data.allFeedFeedSpot.edges)
+
+  const handleEvent = (event) => {
+    console.log(event);
+    navigate(`/${event}`);
+  };
   return (
     <ThemeProvider theme={charityTheme}>
       <Fragment>
@@ -41,6 +65,25 @@ const FeedSpotArticleSection = ({ pageContext }) => {
                 <div
                   dangerouslySetInnerHTML={{ __html: pageContext.content }}
                 />
+                <br />
+                <div>
+                  {prev && (
+                    <div>
+                      <span>Previous</span>
+                      <a href="" onClick={() => handleEvent(prevSlug)}>
+                        {prev.node.title}
+                      </a>
+                    </div>
+                  )}
+                  {next && (
+                    <div>
+                      <span>Next</span>
+                      <a href="" onClick={() => handleEvent(nextSlug)}>
+                        {next.node.title}
+                      </a>
+                    </div>
+                  )}
+                </div>
               </ContentWrapper>
             </BannerWrapper>
           </ContentWrapper>
