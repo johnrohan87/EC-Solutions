@@ -44,14 +44,18 @@ const Navbar = ({ data }) => {
             <select onChange={(e) => eventHandler(e)}>
               {data
                 ? data.map((element, key) => {
+                    let trimedLinkSlug = element.node.link
+                      .replace(/.*\/\/[^\/]*/, '')
+                      .replace('\n/', '')
+                      .replace(/\/$/, ``);
+
+                    if (trimedLinkSlug.includes('/')) {
+                      let tmpArray = trimedLinkSlug.split('/');
+                      trimedLinkSlug = tmpArray[tmpArray.length - 1];
+                    }
+
                     return (
-                      <option
-                        key={key}
-                        value={element.node.link
-                          .replace(/.*\/\/[^\/]*/, '')
-                          .replace('\n/', '')
-                          .replace(/\/$/, ``)}
-                      >
+                      <option key={key} value={trimedLinkSlug}>
                         {element.node.title}
                       </option>
                     );

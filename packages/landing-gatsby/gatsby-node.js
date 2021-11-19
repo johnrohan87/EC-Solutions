@@ -55,6 +55,12 @@ exports.createPages = async ({ graphql, actions, page }) => {
       .replace(/.*\/\/[^\/]*/, '')
       .replace('\n/', '')
       .replace(/\/$/, ``);
+
+    if (trimedLinkSlug.includes('/')) {
+      let tmpArray = trimedLinkSlug.split('/');
+      trimedLinkSlug = tmpArray[tmpArray.length - 1];
+    }
+
     createPage({
       ...page,
       path: `${trimedLinkSlug}`,
