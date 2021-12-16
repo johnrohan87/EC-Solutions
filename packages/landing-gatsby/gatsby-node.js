@@ -60,6 +60,7 @@ exports.createPages = async ({ graphql, actions, page }) => {
       let tmpArray = trimedLinkSlug.split('/');
       trimedLinkSlug = tmpArray[tmpArray.length - 1];
     }
+    result.data.allFeedFeedSpot.edges[index].node.slug = trimedLinkSlug;
 
     createPage({
       ...page,

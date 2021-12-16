@@ -13,7 +13,7 @@ import 'react-sharingbuttons/dist/main.css';
 import logoImage from 'common/assets/image/charity/EC-SolutionsBanner_2.jpg';
 //import heartImage from 'common/assets/image/charity/heart-red.png';
 
-const Navbar = ({ data }) => {
+const Navbar = ({ data }, { pageContext }) => {
   const fb_url = 'https://www.facebook.com/ECSolutionsGroup';
   const tw_url = 'https://twitter.com/ECSolutionsGrp';
   const shareText = 'Check out EC Solutions!';
@@ -23,6 +23,8 @@ const Navbar = ({ data }) => {
     //console.log(e.target.value)
     navigate(`/${e.target.value}`);
   };
+
+  //console.log(data , pageContext);
 
   return (
     <NavbarWrapper className="navbar">

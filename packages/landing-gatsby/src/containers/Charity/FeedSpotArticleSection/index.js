@@ -15,6 +15,7 @@ import {
 import Seo from 'components/seo';
 import BannerWrapper, {
   TextArea,
+  PageScroll,
   ImageArea,
   HighlightedText,
 } from './bannerSection.style';
@@ -23,27 +24,9 @@ const FeedSpotArticleSection = ({ pageContext }) => {
   let prev = pageContext.prev;
   let next = pageContext.next;
 
-  let prevSlug = prev
-    ? prev.node.link
-        .replace(/.*\/\/[^\/]*/, '')
-        .replace('\n/', '')
-        .replace(/\/$/, ``)
-    : null;
-
-  let nextSlug = next
-    ? next.node.link
-        .replace(/.*\/\/[^\/]*/, '')
-        .replace('\n/', '')
-        .replace(/\/$/, ``)
-    : null;
-
-  console.log(pageContext, prev, next, prevSlug, nextSlug);
+  console.log(pageContext, prev, next);
   //console.log(pageContext.allPosts.data.allFeedFeedSpot.edges)
 
-  const handleEvent = (event) => {
-    console.log(event);
-    navigate(`/${event}`);
-  };
   return (
     <ThemeProvider theme={charityTheme}>
       <Fragment>
@@ -63,27 +46,36 @@ const FeedSpotArticleSection = ({ pageContext }) => {
                 {/*<div>{pageContext.slug}</div>*/}
                 <br />
                 <div
+                  className="post"
                   dangerouslySetInnerHTML={{ __html: pageContext.content }}
                 />
                 <br />
-                <div>
-                  {prev && (
-                    <div>
-                      <span>Previous</span>
-                      <a href="" onClick={() => handleEvent(prevSlug)}>
-                        {prev.node.title}
-                      </a>
-                    </div>
-                  )}
-                  {next && (
-                    <div>
-                      <span>Next</span>
-                      <a href="" onClick={() => handleEvent(nextSlug)}>
-                        {next.node.title}
-                      </a>
-                    </div>
-                  )}
-                </div>
+                <PageScroll>
+                  <div>
+                    {prev && (
+                      <div>
+                        <span>Previous Page</span>
+                        <button
+                          type="button"
+                          onClick={() => navigate(`/${prev.node.slug}`)}
+                        >
+                          {prev.node.title}
+                        </button>
+                      </div>
+                    )}
+                    {next && (
+                      <div>
+                        <span>Next Page</span>
+                        <button
+                          type="button"
+                          onClick={() => navigate(`/${next.node.slug}`)}
+                        >
+                          {next.node.title}
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </PageScroll>
               </ContentWrapper>
             </BannerWrapper>
           </ContentWrapper>

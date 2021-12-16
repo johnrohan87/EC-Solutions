@@ -74,6 +74,48 @@ const BannerWrapper = styled.div`
       }
     }
   }
+  div {
+    @media only screen and (max-width: 1440px) {
+      padding: 30px 50px;
+      width: calc(100% - 50px);
+      font-size: 22px;
+      line-height: 32px;
+    }
+    @media only screen and (max-width: 1360px) {
+      padding: 30px 50px;
+      font-size: 22px;
+      line-height: 32px;
+    }
+    @media only screen and (max-width: 991px) {
+      padding: 30px 50px;
+      font-size: 22px;
+      line-height: 32px;
+    }
+    @media only screen and (max-width: 667px) {
+      font-size: 22px;
+      line-height: 32px;
+      max-width: 480px;
+      align-self: flex-start;
+      padding: 30px 50px;
+    }
+    h1 {
+      font-size: 22px;
+      line-height: 32px;
+      padding-top: 50px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    div {
+      width: 100%;
+      padding: 10px 0px;
+      img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
 `;
 
 export const PostContainer = styled.div`
@@ -101,6 +143,29 @@ export const ContentWrapper = styled.div`
   }
   @media only screen and (max-width: 667px) {
     flex-direction: column;
+  }
+`;
+
+export const PageScroll = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  div {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      line-height: 28px;
+      margin: auto auto;
+    }
   }
 `;
 
