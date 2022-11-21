@@ -12,7 +12,7 @@ import ecBanner from 'common/assets/image/charity/New-EC-Logo.png';
 
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 
-const ECBanner = () => {
+const ECAccreditation = () => {
   return (
     <SectionWrapper style={{ minHeight: '600px' }}>
       <Container width="1200px">
@@ -38,4 +38,4 @@ const ECBanner = () => {
   );
 };
 
-export default ECBanner;
+export default ECAccreditation;

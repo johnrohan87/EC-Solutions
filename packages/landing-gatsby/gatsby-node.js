@@ -15,6 +15,8 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   });
 };
 
+{
+  /**
 exports.onCreateBabelConfig = ({ actions }) => {
   actions.setBabelPlugin({
     name: '@babel/plugin-transform-react-jsx',
@@ -52,7 +54,10 @@ exports.createPages = async ({ graphql, actions, page }) => {
     const next = index === edges.length - 1 ? null : edges[index + 1];
 
     let trimedLinkSlug = edge.node.link
-      .replace(/.*\/\/[^\/]*/, '')
+      .replace(/.*\/\/[^\/]*/
+  //, '')
+  {
+    /*
       .replace('\n/', '')
       .replace(/\/$/, ``);
 
@@ -81,3 +86,6 @@ exports.createPages = async ({ graphql, actions, page }) => {
     });
   });
 };
+ */
+  }
+}

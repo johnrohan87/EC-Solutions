@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+//import { useStaticQuery, graphql } from 'gatsby';
 import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
 import { charityTheme } from 'common/theme/charity';
@@ -12,6 +12,7 @@ import SliderSection from 'containers/Charity/SliderSection';
 //import FeedSection from 'containers/Charity/FeedSection';
 import PostSection from 'containers/Charity/PostSection';
 import ECBanner from 'containers/Charity/ECBanner';
+import ECAccreditation from 'containers/Charity/Accreditation';
 //import FeedSpotArticleSection from 'containers/Charity/FeedSpotArticleSection';
 //import FeatureSection from 'containers/Charity/FeatureSection';
 //import BranchSection from 'containers/Charity/BranchSection';
@@ -56,6 +57,7 @@ below sticky above content
 */
 
 const Home = () => {
+  /**
   const data = useStaticQuery(graphql`
     query {
       allFeedFeedSpot {
@@ -70,7 +72,8 @@ const Home = () => {
       }
     }
   `);
-
+ */
+  //<Navbar data={data.allFeedFeedSpot.edges} />
   return (
     <ThemeProvider theme={charityTheme}>
       <Fragment>
@@ -80,12 +83,13 @@ const Home = () => {
         {/* Start charity wrapper section */}
         <CharityWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
-            <Navbar data={data.allFeedFeedSpot.edges} />
+            <Navbar />
           </Sticky>
           <ContentWrapper>
             <ECBanner />
             {/*<FeedSpotArticleSection />*/}
             <SliderSection />
+            <ECAccreditation />
             {/*<FeatureSection />
             <FeedSection />*/}
             <PostSection />
