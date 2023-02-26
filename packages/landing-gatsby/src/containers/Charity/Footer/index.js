@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   //useStaticQuery, graphql,
@@ -23,6 +23,9 @@ import FooterWrapper, {
 } from './footer.style';
 
 import LogoImage from 'common/assets/image/charity/EC-SolutionsBanner_2.jpg';
+import Facebook from 'react-sharingbuttons/dist/buttons/Facebook';
+import Twitter from 'react-sharingbuttons/dist/buttons/Twitter';
+import 'react-sharingbuttons/dist/main.css';
 
 const Footer = ({ row, col, colOne, colTwo }) => {
   /*
@@ -62,6 +65,10 @@ const Footer = ({ row, col, colOne, colTwo }) => {
   </svg>
 </SelectWrapper>
   */
+  const [PhoneNumToggle, setPhoneNumToggle] = useState(false);
+  const fb_url = 'https://www.facebook.com/ECSolutionsGroup';
+  const tw_url = 'https://twitter.com/ECSolutionsGrp';
+  const shareText = 'Check out EC Solutions!';
 
   return (
     <FooterWrapper>
@@ -71,8 +78,24 @@ const Footer = ({ row, col, colOne, colTwo }) => {
             <Link to="/" className="logo">
               <Image src={LogoImage} alt="Charity" />
             </Link>
-
-            {/*<Text className="text" content="US: +786-546-8611" />*/}
+            <br />
+            <Facebook url={fb_url} />
+            <Twitter url={tw_url} shareText={shareText} />
+            <br />
+            {PhoneNumToggle ? (
+              <a href="tel:786-546-8611">
+                <button>786-546-8611</button>
+              </a>
+            ) : (
+              <button
+                onClick={() =>
+                  setPhoneNumToggle((PhoneNumToggle) => !PhoneNumToggle)
+                }
+              >
+                Click to display phone number
+              </button>
+            )}
+            <br />
             <a
               aria-label="go to mail"
               href="mailto:coordinator@ecsolutionsgroup.com"

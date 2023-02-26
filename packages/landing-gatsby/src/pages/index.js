@@ -13,6 +13,7 @@ import SliderSection from 'containers/Charity/SliderSection';
 import PostSection from 'containers/Charity/PostSection';
 import ECBanner from 'containers/Charity/ECBanner';
 import ECAccreditation from 'containers/Charity/Accreditation';
+import ECGandCServices from 'containers/Charity/GandCServices';
 //import FeedSpotArticleSection from 'containers/Charity/FeedSpotArticleSection';
 //import FeatureSection from 'containers/Charity/FeatureSection';
 //import BranchSection from 'containers/Charity/BranchSection';
@@ -90,6 +91,7 @@ const Home = () => {
             {/*<FeedSpotArticleSection />*/}
             <SliderSection />
             <ECAccreditation />
+            <ECGandCServices />
             {/*<FeatureSection />
             <FeedSection />*/}
             <PostSection />
