@@ -84,7 +84,7 @@ export const TextWrapper = styled.div`
     margin-bottom: 24px;
   }
   @media only screen and (max-width: 480px) {
-    margin-bottom: 0px;
+    margin: 2rem;
   }
 
   h2 {
@@ -127,6 +127,7 @@ export const TextWrapper = styled.div`
     }
   }
   h4 {
+    padding: 5vw;
     color: white;
     text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
     @media only screen and (max-width: 1440px) {
@@ -163,6 +164,43 @@ export const CardWrapper = styled.div`
   box-shadow: 0 3px 10px;
   -webkit-box-shadow: 0 3px 10px;
   -moz-box-shadow: 0 3px 10px;
+  margin: 5vw 0px;
+`;
+
+export const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  height: 100%;
+  max-width: 100vw;
+  img {
+    min-height: 10vh;
+    padding: 20px;
+    max-width: 50vw;
+    -webkit-filter: drop-shadow(0px 0px 20px #000000);
+    filter: drop-shadow(0px 0px 20px #000000);
+  }
+  @media only screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    img {
+      height: 260px;
+      padding: 20px 0;
+      max-width: 70vw;
+    }
+  }
+  @media only screen and (min-width: 300px) and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    img {
+      height: 200px;
+      padding: 20px 0;
+      max-width: 80vw;
+    }
+  }
 `;
 
 export default SectionWrapper;
