@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import InputField, { EyeButton } from './input.style';
 const Input = ({
   label,
+  labelColor,
   value,
   onBlur,
   onFocus,
@@ -97,7 +98,11 @@ const Input = ({
   const LabelPosition = isMaterial === true ? 'bottom' : 'top';
 
   // Label field
-  const LabelField = label && <label htmlFor={htmlFor}>{label}</label>;
+  const LabelField = label && (
+    <label htmlFor={htmlFor} style={{ color: labelColor }}>
+      {label}
+    </label>
+  );
 
   // Input type check
   switch (inputType) {
@@ -195,6 +200,9 @@ Input.propTypes = {
     'number',
     'textarea',
   ]),
+
+  /** Set color */
+  labelColor: PropTypes.string,
 
   /** Add icon in input field. This prop will not work with password
    * and textarea field.
