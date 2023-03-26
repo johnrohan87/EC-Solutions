@@ -17,6 +17,7 @@ import SectionWrapper, {
 
 //import ecBanner from 'common/assets/image/charity/New-EC-Logo.png';
 import betterHelp from 'common/assets/image/charity/BetterHelp.png';
+import CrashSupportNetwork from 'common/assets/image/charity/CrashSupportNetwork.jpeg';
 //import { Button } from 'bootstrap';
 
 //import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
@@ -44,11 +45,12 @@ const ECBanner = () => {
           <CardWrapper>
             <Link to="https://www.betterhelp.com/">
               {/** <Text content="Better Help" as="h3" textAlign="center"></Text> **/}
-              <ImageWrapper style={{ overflow: 'hidden' }}>
+              <ImageWrapper style={{ overflow: 'hidden', width: '100%' }}>
                 <Image
                   src={betterHelp}
                   alt="EC Solutions Banner"
                   height="100%"
+                  minHeight="10rem"
                   maxHeight="10vw"
                   maxWidth="450px"
                 />
@@ -61,15 +63,17 @@ const ECBanner = () => {
             />
             <FormGroup width={'100%'} padding={'2rem !important'}>
               <form action="#" data-netlify="true" name="contact" method="post">
+                <Text
+                  as="h3"
+                  content="E.C. Solutions Group is partnered with Better Help to provide free grief and counseling services. Please provide us with your email and someone from our company will be in contact with you."
+                />
+                <Text as="h3" content="Thank you." />
                 <Input
                   name="email"
                   onChange={(e) => setEmail(e)}
                   value={Email}
                   inputType={'email'}
                   labelColor={'white'}
-                  label={
-                    'E.C. Solutions Group is partnered with Better Help to provide free grief and counseling services. Please provide us with your email and someone from our company will be in contact with you. Thank you.'
-                  }
                 />
                 <Button
                   color={'black'}
@@ -83,14 +87,29 @@ const ECBanner = () => {
           </CardWrapper>
           <CardWrapper>
             <Link to="https://crashsupportnetwork.com/">
+              <ImageWrapper style={{ overflow: 'hidden' }}>
+                <Image
+                  src={CrashSupportNetwork}
+                  alt="EC Solutions Banner"
+                  height="100%"
+                  maxHeight="10vw"
+                  maxWidth="450px"
+                />
+              </ImageWrapper>
               <Text
                 content="Crash Support Network"
                 as="h3"
                 textAlign="center"
               />
             </Link>
+
             <Text
               content="Support community for crash survivors"
+              as="h3"
+              textAlign="center"
+            />
+            <Text
+              content="The Crash Support Network is an award-winning community organization supporting crash survivors since 2019"
               as="h4"
               textAlign="center"
             />

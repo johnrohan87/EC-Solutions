@@ -127,14 +127,14 @@ export const TextWrapper = styled.div`
     }
   }
   h4 {
-    padding: 5vw;
+    padding: 3vw 5vw 1vw 5vw;
     color: white;
     text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px #000000;
     @media only screen and (max-width: 1440px) {
-      font-size: 20px;
+      font-size: 25px;
     }
     @media only screen and (max-width: 1360px) {
-      font-size: 20px;
+      font-size: 25px;
     }
     @media only screen and (max-width: 991px) {
       font-size: 15px;
@@ -176,7 +176,8 @@ export const ImageWrapper = styled.div`
   max-width: 100vw;
   img {
     min-height: 10vh;
-    padding: 20px;
+    padding: 0.1rem;
+    margin-top: 1rem;
     max-width: 50vw;
     -webkit-filter: drop-shadow(0px 0px 20px #000000);
     filter: drop-shadow(0px 0px 20px #000000);
