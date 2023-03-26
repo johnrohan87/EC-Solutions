@@ -13,6 +13,7 @@ import SectionWrapper, {
   TextWrapper,
   CardWrapper,
   ImageWrapper,
+  ImageWrapper2,
 } from './mapSection.style';
 
 //import ecBanner from 'common/assets/image/charity/New-EC-Logo.png';
@@ -33,6 +34,7 @@ const ECBanner = () => {
           <h2 style={{ marginTop: '0px' }}>Help when you need it</h2>*/}
         </SectionHeader>
         <TextWrapper>
+          {/* 
           <CardWrapper style={{ margin: '2rem' }}>
             <b>
               <Text
@@ -42,13 +44,14 @@ const ECBanner = () => {
               />
             </b>
           </CardWrapper>
+          */}
           <CardWrapper>
             <Link to="https://www.betterhelp.com/">
               {/** <Text content="Better Help" as="h3" textAlign="center"></Text> **/}
               <ImageWrapper style={{ overflow: 'hidden', width: '100%' }}>
                 <Image
                   src={betterHelp}
-                  alt="EC Solutions Banner"
+                  alt="Better Help"
                   height="100%"
                   minHeight="10rem"
                   maxHeight="10vw"
@@ -87,22 +90,21 @@ const ECBanner = () => {
           </CardWrapper>
           <CardWrapper>
             <Link to="https://crashsupportnetwork.com/">
-              <ImageWrapper style={{ overflow: 'hidden' }}>
+              <ImageWrapper2 style={{ overflow: 'hidden' }}>
                 <Image
                   src={CrashSupportNetwork}
-                  alt="EC Solutions Banner"
+                  alt="Crash Support Network"
                   height="100%"
                   maxHeight="10vw"
                   maxWidth="450px"
                 />
-              </ImageWrapper>
+              </ImageWrapper2>
               <Text
                 content="Crash Support Network"
                 as="h3"
                 textAlign="center"
               />
             </Link>
-
             <Text
               content="Support community for crash survivors"
               as="h3"

@@ -28,14 +28,14 @@ const ECBanner = () => {
             <Parallax x={[-50, 50]} tagOuter="figure">*/}
           <Image
             src={floridaVendorBanner}
-            alt="EC Solutions Banner"
+            alt="Florida Vendor Banner"
             height="100%"
             maxHeight="160px"
             maxWidth="450px"
           />
           <Image
             src={floridaBanner}
-            alt="EC Solutions Banner"
+            alt="Florida Seal"
             height="100%"
             maxHeight="260px"
             maxWidth="450px"

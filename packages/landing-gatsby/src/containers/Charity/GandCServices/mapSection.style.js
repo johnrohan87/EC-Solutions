@@ -203,5 +203,42 @@ export const ImageWrapper = styled.div`
     }
   }
 `;
+export const ImageWrapper2 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  height: 100%;
+  max-width: 100vw;
+  img {
+    min-height: 40vh;
+    padding: 0.1rem;
+    margin-top: 1rem;
+    max-width: 50vw;
+    -webkit-filter: drop-shadow(0px 0px 20px #000000);
+    filter: drop-shadow(0px 0px 20px #000000);
+  }
+  @media only screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    img {
+      min-height: 30vh;
+      padding: 20px 0;
+      max-width: 70vw;
+    }
+  }
+  @media only screen and (min-width: 300px) and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    img {
+      height: 100%;
+      min-height: 25vh;
+      padding: 20px 0;
+      width: auto;
+    }
+  }
+`;
 
 export default SectionWrapper;
