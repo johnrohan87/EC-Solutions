@@ -65,7 +65,7 @@ const ECBanner = () => {
               textAlign="center"
             />
             <FormGroup width={'100%'} padding={'2rem !important'}>
-              <form action="#" data-netlify="true" name="contact" method="post">
+              <form data-netlify="true" name="contact" method="post">
                 <Text
                   as="h3"
                   content="E.C. Solutions Group is partnered with Better Help to provide free grief and counseling services. Please provide us with your email and someone from our company will be in contact with you."
