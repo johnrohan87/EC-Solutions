@@ -72,7 +72,7 @@ const ECBanner = () => {
                 />
                 <Text as="h3" content="Thank you." />
                 <Input
-                  name="email"
+                  htmlFor="email"
                   onChange={(e) => setEmail(e)}
                   value={Email}
                   inputType={'email'}
